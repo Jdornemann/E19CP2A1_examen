@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @holidaytask.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @holidaytask.description %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @holidaytask.done %>
+</p>
+
+<%= link_to 'Edit', edit_holidaytask_path(@holidaytask) %> |
+<%= link_to 'Back', holidaytasks_path %>

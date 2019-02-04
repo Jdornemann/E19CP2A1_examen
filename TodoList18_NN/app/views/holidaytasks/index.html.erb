@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+<div class="row">
+    <% @holidaytask.each_slice(4) do |row|%>
+        <% row.each do |holidaytask|  %>
+
+        <div class="col">
+            <div class="card">
+            <%= image_tag holidaytask.photo , class:'card-img-top' %>
+                <div class="card-body">
+                   <h5> <%= holidaytask.name %> </h5>
+                    <%# <%= holidaytask.description %> 
+                   <p>  <%= holidaytask.done %> </p>
+                    <%# <%= link_to 'Show', user_holidaytask_path(current_user.id) </td> %>
+                    <%# <%= link_to 'Edit', edit_holidaytask_path(holidaytask) </td>%>
+                    <%#  <%= link_to 'Destroy', holidaytask, method: :delete, data: { confirm: 'Are you sure?' } </td> %>
+                </div>
+          </div>
+       </div>
+        <% end %>
+        <div class="w-100" style="margin-top: 20px"></div>
+    <% end %>
+</div>
+</div>
+
+
+<%= link_to 'New Holidaytask', new_user_holidaytask_path(current_user) %>
